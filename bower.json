@@ -1,0 +1,18 @@
+{
+  "name": "purescript-isotypes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-profunctor-lenses": "^1.0.0",
+    "purescript-foldable-traversable": "^1.0.0"
+  },
+  "devDependencies": {
+    "purescript-console": "^1.0.0",
+    "purescript-psci-support": "^1.0.0",
+    "purescript-test-unit": "^7.0.0"
+  }
+}
