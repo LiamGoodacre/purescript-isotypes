@@ -9,9 +9,13 @@ ala :: forall s t a b y. Iso s t a b -> ((s -> a) -> y -> b) -> y -> t
 ```
 
 Apply a function ala some iso
+
 Example:
-    > ala additively foldMap [1.0, 2.0]
-    = 3.0
+
+```
+> ala additively foldMap [1.0, 2.0]
+= 3.0
+```
 
 #### `foldAla`
 
@@ -20,8 +24,12 @@ foldAla :: forall f s a. (Foldable f, Monoid a) => IsoP s a -> f s -> s
 ```
 
 Use of ala specialized to foldMap
+
 Example:
-    > foldAla multiplicatively [3.0, 4,0]
-    = 12.0
+
+```
+> foldAla multiplicatively [3.0, 4,0]
+= 12.0
+```
 
 
