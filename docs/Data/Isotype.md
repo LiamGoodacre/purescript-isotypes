@@ -266,6 +266,7 @@ foldAla multiplicatively [] = one
 foldAla multiplicatively [a, b] = a * b
 foldAla multiplicatively [3.0, 4.0] = 12.0
 ```
+See https://pursuit.purescript.org/packages/purescript-monoid/1.0.0/docs/Data.Monoid.Multiplicative
 
 #### `additively`
 
@@ -284,6 +285,7 @@ foldAla additively [] = zero
 foldAla additively [a, b] = a + b
 foldAla additively [3.0, 4.0] = 7.0
 ```
+See https://pursuit.purescript.org/packages/purescript-monoid/1.0.0/docs/Data.Monoid.Additive
 
 ### Re-exported from Data.Isotype.Types:
 
