@@ -4,9 +4,11 @@ import Prelude
 import Control.Monad.Aff.Console (log)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE)
-import Data.Isotype (foldAla)
+import Data.Isotype.Ala (foldAla)
 import Data.Isotype.HeytingAlgebra (conjunctly, disjunctly)
+import Data.Isotype.Monoid (firstly, lastly, endoly, dually)
 import Data.Isotype.Semiring (additively, multiplicatively)
+import Data.Maybe (Maybe(Nothing, Just))
 import Test.Unit (suite, test)
 import Test.Unit.Assert (equal)
 import Test.Unit.Console (TESTOUTPUT)
@@ -38,8 +40,17 @@ main = runTest do
       equal true (foldAla disjunctly [false, true])
 
   suite "Monoid" do
-    test "todo" do
-      log "todo"
+    test "Dual - dually" do
+      equal "HelloWorld" (foldAla dually ["World", "Hello"])
+
+    test "Endo - endoly" do
+      equal "OMG!" (foldAla endoly [(_ <> "!"), ("O" <> _), (_ <> "G")] "M")
+
+    test "First - firstly" do
+      equal (Just "first") (foldAla firstly [Nothing, Just "first", Nothing, Just "last", Nothing])
+
+    test "Last - lastly" do
+      equal (Just "last") (foldAla lastly [Nothing, Just "first", Nothing, Just "last", Nothing])
 
   suite "Profunctor" do
     test "todo" do
