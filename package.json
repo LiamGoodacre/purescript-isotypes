@@ -1,8 +1,5 @@
 {
-  "name": "purescript-isotypes",
-  "version": "0.1.0",
-  "description": "iso for common newtypes",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "build": "pulp build",
     "test": "pulp test",
@@ -10,8 +7,6 @@
     "build:json": "pulp build --no-psa --json-errors",
     "build:docs": "pulp docs"
   },
-  "author": "Liam Goodacre",
-  "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.9",
     "pulp": "^9.0.1",

@@ -1,11 +1,16 @@
 {
   "name": "purescript-isotypes",
+  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "output"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LiamGoodacre/purescript-isotypes.git"
+  },
   "dependencies": {
     "purescript-profunctor-lenses": "^1.0.0",
     "purescript-foldable-traversable": "^1.0.0"
