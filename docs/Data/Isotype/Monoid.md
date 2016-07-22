@@ -12,7 +12,10 @@ For a type `t`; if `Monoid t` exists then `Monoid (Dual t)` exists.
 This monoid appends in reverse order to the underlying monoid:
 ```purescript
 Dual a <> Dual b = Dual (b <> a)
+Dual "World" <> Dual "Hello" = Dual "HelloWorld"
 
+foldAla dually [] = mempty
+foldAla dually [a, b] = b <> a
 foldAla dually ["World", "Hello"] = "HelloWorld"
 ```
 See https://pursuit.purescript.org/packages/purescript-monoid/1.0.0/docs/Data.Monoid.Dual

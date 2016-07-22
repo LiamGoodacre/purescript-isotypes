@@ -47,9 +47,13 @@ main = runTest do
       equal "OMG!" (foldAla endoly [(_ <> "!"), ("O" <> _), (_ <> "G")] "M")
 
     test "First - firstly" do
+      equal Nothing (foldAla firstly [] :: Maybe Unit)
+      equal Nothing (foldAla firstly [Nothing] :: Maybe Unit)
       equal (Just "first") (foldAla firstly [Nothing, Just "first", Nothing, Just "last", Nothing])
 
     test "Last - lastly" do
+      equal Nothing (foldAla lastly [] :: Maybe Unit)
+      equal Nothing (foldAla lastly [Nothing] :: Maybe Unit)
       equal (Just "last") (foldAla lastly [Nothing, Just "first", Nothing, Just "last", Nothing])
 
   suite "Profunctor" do
