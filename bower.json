@@ -1,16 +1,22 @@
 {
   "name": "purescript-isotypes",
+  "homepage": "https://github.com/LiamGoodacre/purescript-isotypes",
+  "description": "isos for common newtypes",
+  "author": "Liam Goodacre",
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "output"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/LiamGoodacre/purescript-isotypes.git"
   },
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "node_modules",
+    "output",
+    "test",
+    "bower.json",
+    "package.json"
+  ],
   "dependencies": {
     "purescript-profunctor-lenses": "^1.0.0",
     "purescript-foldable-traversable": "^1.0.0"

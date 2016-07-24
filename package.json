@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "pulp build",
+    "build": "pulp build --censor-lib --strict",
     "test": "pulp test",
     "dev": "pscid --test",
     "build:json": "pulp build --no-psa --json-errors",
@@ -10,7 +10,6 @@
   "devDependencies": {
     "bower": "^1.7.9",
     "pulp": "^9.0.1",
-    "pscid": "^1.10.0",
     "purescript-psa": "0.3.9"
   }
 }
