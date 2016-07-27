@@ -1,4 +1,4 @@
-# purescript-isotype
+# purescript-isotypes
 
 iso for common newtypes.
 
@@ -10,6 +10,6 @@ bower install purescript-isotypes
 
 ## Documentation
 
-Not yet on Pursuit.
+See on [Pursuit](https://pursuit.purescript.org/packages/purescript-isotypes/).
 
-Build docs with `npm run build:docs`
+Or build docs with `npm run build:docs`.
