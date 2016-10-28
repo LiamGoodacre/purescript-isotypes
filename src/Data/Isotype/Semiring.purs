@@ -5,9 +5,9 @@ module Data.Isotype.Semiring
 where
 
 import Data.Isotype.Types (Isotype)
-import Data.Lens as Lens
-import Data.Monoid.Additive (runAdditive, Additive(Additive))
-import Data.Monoid.Multiplicative (runMultiplicative, Multiplicative(Multiplicative))
+import Data.Isotype.Newtype (newtypeIso)
+import Data.Monoid.Additive (Additive)
+import Data.Monoid.Multiplicative (Multiplicative)
 
 -- | A `Semiring` supports (among other operations) an `addition` function and
 -- | a `zero` value.  Together they form a monoid.  The type `Additive t`
@@ -22,7 +22,7 @@ import Data.Monoid.Multiplicative (runMultiplicative, Multiplicative(Multiplicat
 -- | ```
 -- | See https://pursuit.purescript.org/packages/purescript-monoid/1.0.0/docs/Data.Monoid.Additive
 additively :: Isotype Additive
-additively = Lens.iso Additive runAdditive
+additively = newtypeIso
 
 -- | A `Semiring` supports (among other operations) a `multiplication` function
 -- | and a `one` value.  Together they form a monoid.  The type
@@ -37,4 +37,4 @@ additively = Lens.iso Additive runAdditive
 -- | ```
 -- | See https://pursuit.purescript.org/packages/purescript-monoid/1.0.0/docs/Data.Monoid.Multiplicative
 multiplicatively :: Isotype Multiplicative
-multiplicatively = Lens.iso Multiplicative runMultiplicative
+multiplicatively = newtypeIso

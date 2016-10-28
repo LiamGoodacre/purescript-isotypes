@@ -5,12 +5,12 @@ module Data.Isotype.HeytingAlgebra
 where
 
 import Data.Isotype.Types (Isotype)
-import Data.Lens as Lens
-import Data.Monoid.Conj (runConj, Conj(Conj))
-import Data.Monoid.Disj (runDisj, Disj(Disj))
+import Data.Isotype.Newtype (newtypeIso)
+import Data.Monoid.Conj (Conj)
+import Data.Monoid.Disj (Disj)
 
 conjunctly :: Isotype Conj
-conjunctly = Lens.iso Conj runConj
+conjunctly = newtypeIso
 
 disjunctly :: Isotype Disj
-disjunctly = Lens.iso Disj runDisj
+disjunctly = newtypeIso

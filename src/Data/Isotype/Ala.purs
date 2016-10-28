@@ -7,7 +7,6 @@ where
 import Data.Lens as Lens
 import Data.Foldable (class Foldable, foldMap)
 import Data.Monoid (class Monoid)
-import Prelude ((<<<))
 
 -- | Apply a function ala some iso
 -- |
@@ -28,5 +27,5 @@ ala i r y = Lens.review i (r (Lens.view i) y)
 -- | > foldAla multiplicatively [3.0, 4,0]
 -- | = 12.0
 -- | ```
-foldAla :: forall f s a. (Foldable f, Monoid a) => Lens.IsoP s a -> f s -> s
+foldAla :: forall f s a. (Foldable f, Monoid a) => Lens.Iso' s a -> f s -> s
 foldAla i xs = ala i foldMap xs

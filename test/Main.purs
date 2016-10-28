@@ -2,8 +2,6 @@ module Test.Main where
 
 import Prelude
 import Control.Monad.Aff.Console (log)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE)
 import Data.Functor.Contravariant (cmap)
 import Data.Isotype.Ala (foldAla)
 import Data.Isotype.Contravariant (oppositely)
@@ -14,10 +12,8 @@ import Data.Lens as Lens
 import Data.Maybe (Maybe(Nothing, Just))
 import Test.Unit (suite, test)
 import Test.Unit.Assert as Assert
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 
-main :: forall eff. Eff (console :: CONSOLE, testOutput :: TESTOUTPUT | eff) Unit
 main = runTest do
   suite "Contravariant" do
     test "Comparison - comparatively" do

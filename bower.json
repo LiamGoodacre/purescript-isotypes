@@ -18,12 +18,13 @@
     "package.json"
   ],
   "dependencies": {
-    "purescript-profunctor-lenses": "^1.0.0",
-    "purescript-foldable-traversable": "^1.0.0"
+    "purescript-profunctor-lenses": "^2.0.0",
+    "purescript-foldable-traversable": "^2.0.0",
+    "purescript-newtype": "^1.0.0"
   },
   "devDependencies": {
-    "purescript-console": "^1.0.0",
-    "purescript-psci-support": "^1.0.0",
-    "purescript-test-unit": "^7.0.0"
+    "purescript-console": "^2.0.0",
+    "purescript-psci-support": "^2.0.0",
+    "purescript-test-unit": "^10.0.1"
   }
 }
