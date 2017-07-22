@@ -1,4 +1,4 @@
-# purescript-isotypes
+# purescript-isotypes (not maintained)
 
 iso for common newtypes.
 
