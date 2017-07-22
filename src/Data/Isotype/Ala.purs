@@ -16,7 +16,8 @@ import Data.Monoid (class Monoid)
 -- | > ala additively foldMap [1.0, 2.0]
 -- | = 3.0
 -- | ```
-ala :: forall s t a b y. Lens.Iso s t a b -> ((s -> a) -> y -> b) -> y -> t
+ala :: forall s t a b y.
+  Lens.Iso s t a b -> ((s -> a) -> y -> b) -> y -> t
 ala i r y = Lens.review i (r (Lens.view i) y)
 
 -- | Use of ala specialized to foldMap
@@ -27,5 +28,8 @@ ala i r y = Lens.review i (r (Lens.view i) y)
 -- | > foldAla multiplicatively [3.0, 4,0]
 -- | = 12.0
 -- | ```
-foldAla :: forall f s a. (Foldable f, Monoid a) => Lens.Iso' s a -> f s -> s
+foldAla :: forall f s a.
+  Foldable f =>
+  Monoid a =>
+  Lens.Iso' s a -> f s -> s
 foldAla i xs = ala i foldMap xs

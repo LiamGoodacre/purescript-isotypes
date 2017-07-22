@@ -14,14 +14,30 @@ import Data.Op (Op)
 import Data.Ordering (Ordering)
 import Data.Predicate (Predicate)
 
-comparatively :: forall a b. Lens.Iso (a -> a -> Ordering) (b -> b -> Ordering) (Comparison a) (Comparison b)
+comparatively :: forall a b.
+  Lens.Iso (a -> a -> Ordering)
+           (b -> b -> Ordering)
+           (Comparison a)
+           (Comparison b)
 comparatively = newtypeIso
 
-equivalently :: forall a b. Lens.Iso (a -> a -> Boolean) (b -> b -> Boolean) (Equivalence a) (Equivalence b)
+equivalently :: forall a b.
+  Lens.Iso (a -> a -> Boolean)
+           (b -> b -> Boolean)
+           (Equivalence a)
+           (Equivalence b)
 equivalently = newtypeIso
 
-oppositely :: forall a b c d. Lens.Iso (b -> a) (d -> c) (Op a b) (Op c d)
+oppositely :: forall a b c d.
+  Lens.Iso (b -> a)
+           (d -> c)
+           (Op a b)
+           (Op c d)
 oppositely = newtypeIso
 
-predicately :: forall a b. Lens.Iso (a -> Boolean) (b -> Boolean) (Predicate a) (Predicate b)
+predicately :: forall a b.
+  Lens.Iso (a -> Boolean)
+           (b -> Boolean)
+           (Predicate a)
+           (Predicate b)
 predicately = newtypeIso
